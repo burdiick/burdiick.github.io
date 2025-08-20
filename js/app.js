@@ -1637,8 +1637,8 @@ document.addEventListener('mousedown', function (e) {
     break;
   case 'startMenu':
     game.menu.charList.forEach(function (box) {
-      if (e.layerX < scale(box.leftCorner.x) + scale(box.width) && e.layerX > scale(box.leftCorner.x)) {
-        if (e.layerY < scale(box.leftCorner.y + box.height) && e.layerY > scale(box.leftCorner.y)) {
+      if (e.offsetX < scale(box.leftCorner.x) + scale(box.width) && e.offsetX > scale(box.leftCorner.x)) {
+        if (e.offsetY < scale(box.leftCorner.y + box.height) && e.offsetY > scale(box.leftCorner.y)) {
           game.character = box.image;
           //console.log(game.character);
           game.menu.charList.forEach(function (boxtest) {
@@ -1651,8 +1651,8 @@ document.addEventListener('mousedown', function (e) {
     }, this);
 
     game.menu.list.forEach(function (box) {
-      if (e.layerX < scale(box.leftCorner.x + box.width) && e.layerX > scale(box.leftCorner.x)) {
-        if (e.layerY < scale(box.leftCorner.y + box.height) && e.layerY > scale(box.leftCorner.y)) {
+      if (e.offsetX < scale(box.leftCorner.x + box.width) && e.offsetX > scale(box.leftCorner.x)) {
+        if (e.offsetY < scale(box.leftCorner.y + box.height) && e.offsetY > scale(box.leftCorner.y)) {
           game.menu.levelButtonClicked(box.text);
         }
       }
@@ -1664,8 +1664,8 @@ document.addEventListener('mousedown', function (e) {
     //console.log(game);
     game.menu.menuObj.forEach(function (box) {
       if (box.type === 'button') {
-        if (e.layerX < scale(box.x - (box.width / 2) + box.width) && e.layerX > scale(box.x - box.width / 2)) {
-          if (e.layerY < scale((box.y - box.height * 0.2) + box.height) && e.layerY > scale(box.y - box.height * 0.3)) {
+        if (e.offsetX < scale(box.x - (box.width / 2) + box.width) && e.offsetX > scale(box.x - box.width / 2)) {
+          if (e.offsetY < scale((box.y - box.height * 0.2) + box.height) && e.offsetY > scale(box.y - box.height * 0.3)) {
             if (box.text === 'Restart') {
               game.menu.levelButtonClicked(game.level.levelNumber);
             } else if (box.text === 'Next') {
