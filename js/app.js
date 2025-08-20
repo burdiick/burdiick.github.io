@@ -1576,7 +1576,7 @@ document.addEventListener('keydown', function (e) {
   switch (globalState) {
   case 'run':
     if (game.level.player.status !== 'dead') {
-      game.level.player.keyDown(allowedKeys[e.keyCode]);
+      game.level.player.keyDown(allowedKeys[e.key]);
     }
 
     break;
@@ -1605,7 +1605,7 @@ document.addEventListener('keyup', function (e) {
   //console.log(e);
   switch (globalState) {
   case 'run':
-    game.level.player.keyUp(allowedKeys[e.keyCode]);
+    game.level.player.keyUp(allowedKeys[e.key]);
     break;
   case 'startMenu':
     //do something
