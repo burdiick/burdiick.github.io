@@ -1605,7 +1605,7 @@ document.addEventListener('keyup', function (e) {
   //console.log(e);
   switch (globalState) {
   case 'run':
-    game.level.player.keyUp(allowedKeys[e.key]);
+    game.level.player.keyUp(allowedKeys[e.code]);
     break;
   case 'startMenu':
     //do something
