@@ -1561,17 +1561,17 @@ var game = new Game();
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keydown', function (e) {
   var allowedKeys = {
-    37: 'left',
-    38: 'up',
-    39: 'right',
-    40: 'down',
-    49: '1',
-    50: '2',
-    27: 'escape',
-    65: 'left',
-    83: 'down',
-    68: 'right',
-    87: 'up'
+    'ArrowLeft': 'left',
+    'ArrowUp': 'up',
+    'ArrowRight': 'right',
+    'ArrowDown': 'down',
+    'Digit1': '1',
+    'Digit2': '2',
+    'Escape': 'escape',
+    'ArrowLeft': 'left',
+    'ArrowDown': 'down',
+    'ArrowRight': 'right',
+    'ArrowUp': 'up'
   };
   switch (globalState) {
   case 'run':
@@ -1590,17 +1590,17 @@ document.addEventListener('keydown', function (e) {
 
 document.addEventListener('keyup', function (e) {
   var allowedKeys = {
-    37: 'left',
-    38: 'up',
-    39: 'right',
-    40: 'down',
-    49: '1',
-    50: '2',
-    27: 'escape',
-    65: 'left',
-    83: 'down',
-    68: 'right',
-    87: 'up'
+    'ArrowLeft': 'left',
+    'ArrowUp': 'up',
+    'ArrowRight': 'right',
+    'ArrowDown': 'down',
+    'Digit1': '1',
+    'Digit2': '2',
+    'Escape': 'escape',
+    'ArrowLeft': 'left',
+    'ArrowDown': 'down',
+    'ArrowRight': 'right',
+    'ArrowUp': 'up'
   };
   //console.log(e);
   switch (globalState) {
