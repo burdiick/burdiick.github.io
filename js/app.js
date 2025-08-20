@@ -1627,8 +1627,8 @@ document.addEventListener('mousedown', function (e) {
   switch (globalState) {
   case 'run':
     game.menu.menuObj.forEach(function (box) {
-      if (e.clientX < scale(box.x + box.width) && e.clientX > scale(box.x)) {
-        if (e.clientY < scale(box.y + box.height) && e.clientY > scale(box.y)) {
+      if (e.offsetX < scale(box.x + box.width) && e.offsetX > scale(box.x)) {
+        if (e.offsetY < scale(box.y + box.height) && e.offsetY > scale(box.y)) {
           game.menu = new PauseMenu(game.level);
           globalState = 'pause';
         }
